@@ -1,11 +1,15 @@
 FROM ubuntu:19.04
 
-RUN apt-get update && apt-get upgrade -y
-RUN apt-get install golang -y || snap install go --classic
+RUN apt-get update
+RUN (apt-get install -y golang || snap install go --classic)
 RUN apt-get install -y git
-
-# Installing go-junit-report to make xml output of `go test`
 RUN go get -u github.com/jstemmer/go-junit-report
-RUN cp /root/go/bin/go-junit-report /usr/local/bin/
-
 RUN go get -u github.com/julienschmidt/httprouter
+RUN go get -u cloud.google.com/go/datastore
+RUN go get -u golang.org/x/crypto/bcrypt
+RUN go get -u golang.org/x/lint/golint
+RUN go get -u github.com/dgrijalva/jwt-go
+RUN apt-get clean
+RUN rm -fr /var/lib/api/lists/*
+
+RUN cp /root/go/bin/* /usr/local/bin/
