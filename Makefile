@@ -1,8 +1,7 @@
 DKNAME = eikoapp/test-docker
 DKTAG = $(shell git rev-parse --short HEAD)
 
-all: build
-all: push
+all: build tag push
 
 build:
 	docker build -t $(DKNAME) .
