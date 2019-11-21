@@ -12,3 +12,9 @@ tag:
 push:
 	docker push $(DKNAME):latest
 	docker push $(DKNAME):$(DKTAG)
+
+test-build:
+	@dgoss edit -ti eikoapp/test-docker:latest bash
+
+test:
+	@dgoss run -ti eikoapp/test-docker:latest bash

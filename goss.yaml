@@ -1,0 +1,124 @@
+file:
+  /root/go/src/cloud.google.com/go/datastore:
+    exists: true
+    mode: "0755"
+    size: 4096
+    owner: root
+    group: root
+    filetype: directory
+    contains: []
+  /root/go/src/github.com/algolia/algoliasearch-client-go:
+    exists: false
+    contains: []
+  /root/go/src/github.com/dgrijalva/jwt-go:
+    exists: true
+    mode: "0755"
+    size: 4096
+    owner: root
+    group: root
+    filetype: directory
+    contains: []
+  /root/go/src/github.com/jstemmer/go-junit-report:
+    exists: true
+    mode: "0755"
+    size: 4096
+    owner: root
+    group: root
+    filetype: directory
+    contains: []
+  /root/go/src/github.com/julienschmidt/httprouter:
+    exists: true
+    mode: "0755"
+    size: 4096
+    owner: root
+    group: root
+    filetype: directory
+    contains: []
+  /root/go/src/github.com/mmcloughlin/geohash:
+    exists: true
+    mode: "0755"
+    size: 4096
+    owner: root
+    group: root
+    filetype: directory
+    contains: []
+  /root/go/src/golang.org/x/crypto/bcrypt:
+    exists: true
+    mode: "0755"
+    size: 4096
+    owner: root
+    group: root
+    filetype: directory
+    contains: []
+  /root/go/src/golang.org/x/lint/golint:
+    exists: true
+    mode: "0755"
+    size: 4096
+    owner: root
+    group: root
+    filetype: directory
+    contains: []
+  /usr/bin/curl:
+    exists: true
+    mode: "0755"
+    size: 231656
+    owner: root
+    group: root
+    filetype: file
+    contains: []
+  /usr/bin/gcc:
+    exists: true
+    mode: "0777"
+    size: 5
+    owner: root
+    group: root
+    linked-to: gcc-9
+    filetype: symlink
+    contains: []
+  /usr/bin/git:
+    exists: true
+    mode: "0755"
+    size: 2748176
+    owner: root
+    group: root
+    filetype: file
+    contains: []
+  /usr/bin/make:
+    exists: true
+    mode: "0755"
+    size: 230968
+    owner: root
+    group: root
+    filetype: file
+    contains: []
+  /usr/bin/tar:
+    exists: true
+    mode: "0755"
+    size: 452048
+    owner: root
+    group: root
+    filetype: file
+    contains: []
+  /usr/bin/wget:
+    exists: true
+    mode: "0755"
+    size: 548568
+    owner: root
+    group: root
+    filetype: file
+    contains: []
+  /usr/local/go/bin/go:
+    exists: true
+    mode: "0755"
+    size: 15071246
+    owner: root
+    group: root
+    filetype: file
+    contains: []
+command:
+  go version:
+    exit-status: 0
+    stdout:
+    - go version go1.13.4 linux/amd64
+    stderr: []
+    timeout: 10000
