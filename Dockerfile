@@ -1,15 +1,24 @@
-FROM ubuntu:19.04
+FROM ubuntu:19.10
 
-RUN apt-get update
-RUN (apt-get install -y golang || snap install go --classic)
+RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y git
+RUN apt-get install -y wget
+RUN apt-get install -y tar
+RUN apt-get install -y curl
+RUN apt-get clean
+
+RUN wget -q https://dl.google.com/go/go1.13.4.linux-amd64.tar.gz
+RUN tar -C /tmp -xf /go1.13.4.linux-amd64.tar.gz
+RUN mv /tmp/go /usr/local
+ENV PATH="/usr/local/go/bin:${PATH}"
+
 RUN go get -u github.com/jstemmer/go-junit-report
 RUN go get -u github.com/julienschmidt/httprouter
 RUN go get -u cloud.google.com/go/datastore
 RUN go get -u golang.org/x/crypto/bcrypt
 RUN go get -u golang.org/x/lint/golint
 RUN go get -u github.com/dgrijalva/jwt-go
-RUN apt-get clean
+RUN go get -u github.com/mmcloughlin/geohash
 RUN rm -fr /var/lib/api/lists/*
 
 RUN cp /root/go/bin/* /usr/local/bin/
