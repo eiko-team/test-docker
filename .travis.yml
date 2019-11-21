@@ -1,0 +1,8 @@
+sudo: required
+services:
+    - docker
+language: minimal
+
+after_success:
+    - curl -fsSL https://goss.rocks/install | sh
+    - make test
