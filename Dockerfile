@@ -6,6 +6,7 @@ RUN apt-get install -y wget
 RUN apt-get install -y tar
 RUN apt-get install -y curl
 RUN apt-get install -y make
+RUN apt-get install -y gcc
 RUN apt-get clean
 
 RUN wget -q https://dl.google.com/go/go1.13.4.linux-amd64.tar.gz
