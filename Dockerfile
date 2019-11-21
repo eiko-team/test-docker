@@ -19,6 +19,10 @@ RUN go get -u golang.org/x/crypto/bcrypt
 RUN go get -u golang.org/x/lint/golint
 RUN go get -u github.com/dgrijalva/jwt-go
 RUN go get -u github.com/mmcloughlin/geohash
+RUN mkdir -p /root/go/src/tmp && \
+    cd /root/go/src/tmp && \
+    go mod init tmp && \
+    go get github.com/algolia/algoliasearch-client-go/v3@v3.4.0
 RUN rm -fr /var/lib/api/lists/*
 
 RUN cp /root/go/bin/* /usr/local/bin/
